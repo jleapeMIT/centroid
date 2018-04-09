@@ -23,12 +23,19 @@ var init = function(){
 
 
 var calculateCentroid = function(points){
-    //----------------------------------
-    //  YOUR CODE
-    //----------------------------------    
+    var length = points.length;
+    var sumX = 0;
+    var sumY = 0;
 
-    // return centroid with the following format
-    // return {x:10, y:30};  
+    points.forEach((point) => {
+        sumX += point.x;
+        sumY += point.y;
+    });
+    
+    var centroidX = Math.round(sumX / length, 0);
+    var centroidY = Math.round(sumY / length, 0);
+    
+    return {x : centroidX, y : centroidY}
 };
 
 
